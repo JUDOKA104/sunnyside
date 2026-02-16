@@ -1,0 +1,169 @@
+/* src/components/Hero.css */
+
+/* ========================================= */
+/* --- MOBILE FIRST (Par défaut) --- */
+/* ========================================= */
+
+.hero {
+    background: url('/images/mobile/image-header.jpg') no-repeat center/cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo {
+    height: 24px;
+}
+
+/* --- BOUTON BURGER --- */
+.hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block; /* Visible sur mobile */
+}
+
+/* --- BULLE DU MENU MOBILE --- */
+.nav-links {
+    position: absolute;
+    top: 106px;
+    left: 24px;
+    right: 24px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 40px 0;
+
+    /* Animations d'apparition */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Le fameux petit triangle blanc en haut à droite */
+.nav-links::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    right: 0;
+    border-bottom: 24px solid var(--white);
+    border-left: 24px solid transparent;
+}
+
+/* Classe active déclenchée par React */
+.nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-links li a {
+    color: var(--dark-grayish-blue);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Bouton Contact sur Mobile (Jaune) */
+.nav-links .contact-btn {
+    background-color: var(--yellow);
+    color: var(--very-dark-desaturated-blue);
+    font-family: var(--ff-fraunces);
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+/* --- TEXTE ET FLÈCHE --- */
+.hero-title {
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 140px;
+    padding: 0 20px;
+}
+
+.arrow-down {
+    margin-top: 50px;
+}
+
+/* ========================================= */
+/* --- DESKTOP (Écrans larges) --- */
+/* ========================================= */
+
+@media (min-width: 768px) {
+    .hero {
+        background: url('/images/desktop/image-header.jpg') no-repeat center/cover;
+    }
+
+    .navbar {
+        padding: 40px 50px;
+    }
+
+    .logo {
+        height: auto;
+    }
+
+    .hamburger-btn {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        background-color: transparent;
+        flex-direction: row;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        gap: 48px;
+    }
+
+    .nav-links::before {
+        display: none;
+    }
+
+    .nav-links li a {
+        color: var(--white);
+        font-size: 18px;
+    }
+
+    .nav-links .contact-btn {
+        background-color: var(--white);
+        color: var(--very-dark-desaturated-blue);
+        padding: 16px 30px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links .contact-btn:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: var(--white);
+    }
+
+    .hero-title {
+        font-size: 56px;
+        letter-spacing: 10px;
+        margin-top: 180px;
+    }
+}

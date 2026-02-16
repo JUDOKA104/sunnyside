@@ -1,0 +1,90 @@
+/* components/Testimonials.css */
+
+/* ========================================= */
+/* --- MOBILE FIRST (Par défaut) --- */
+/* ========================================= */
+
+.testimonials-section {
+    padding: 64px 24px; /* Espacement standard mobile */
+    text-align: center;
+    background-color: var(--white);
+}
+
+.testimonials-heading {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--grayish-blue);
+    font-size: 16px;
+    margin-bottom: 64px; /* Grand espace avant les cartes */
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-direction: column; /* On empile verticalement sur mobile */
+    gap: 64px; /* Espace entre chaque témoignage */
+    align-items: center;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px; /* Pour éviter que le texte ne soit trop large sur tablettes */
+}
+
+.client-img {
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 32px;
+}
+
+.client-text {
+    color: var(--very-dark-grayish-blue);
+    line-height: 1.8;
+    margin-bottom: 32px;
+    font-size: 18px;
+}
+
+.client-name {
+    font-family: var(--ff-fraunces);
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.client-role {
+    font-size: 14px;
+    color: var(--grayish-blue);
+}
+
+/* ========================================= */
+/* --- DESKTOP (Écrans larges > 1024px) --- */
+/* ========================================= */
+/* On utilise 1024px ici car 3 colonnes demandent de la place */
+@media (min-width: 1024px) {
+    .testimonials-section {
+        padding: 160px 100px; /* Marges desktop plus grandes */
+    }
+
+    .testimonials-heading {
+        font-size: 20px;
+        letter-spacing: 5px;
+        margin-bottom: 80px;
+    }
+
+    .testimonials-grid {
+        flex-direction: row; /* On repasse à l'horizontale */
+        gap: 30px;
+        justify-content: center;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .testimonial-card {
+        flex: 1; /* Chaque carte prend un tiers de la place */
+    }
+
+    .client-img { margin-bottom: 56px; }
+    .client-text { margin-bottom: 56px; }
+}
