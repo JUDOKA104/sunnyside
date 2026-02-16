@@ -1,16 +1,48 @@
-# React + Vite
+# Frontend Mentor - Solution Sunnyside agency landing page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ceci est une solution au [challenge Sunnyside agency landing page sur Frontend Mentor](https://www.frontendmentor.io/challenges/agency-landing-page-7yVs3B6ef).
 
-Currently, two official plugins are available:
+## Aperçu
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Le défi
 
-## React Compiler
+Les utilisateurs doivent pouvoir :
+- Voir une mise en page optimale selon la taille de leur écran (Responsive).
+- Voir les effets de survol (hover) sur les éléments interactifs.
+- Utiliser le menu burger sur la version mobile.
+- **Bonus :** Profiter d'animations d'apparition au scroll et d'effets de zoom sur les images !
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### Liens
 
-## Expanding the ESLint configuration
+- Lien du site en direct : [https://judoka104.github.io/sunnyside/](https://judoka104.github.io/sunnyside/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Mon processus
+
+### Construit avec
+
+- HTML5 Sémantique
+- Variables CSS
+- Flexbox & CSS Grid
+- Approche Mobile-first
+- [React](https://reactjs.org/) - Bibliothèque JS
+- [Vite](https://vitejs.dev/) - Outil de build
+- API native `IntersectionObserver` (pour les animations)
+
+### Ce que j'ai appris
+
+Ce projet a été un super entraînement pour maîtriser **CSS Grid** et le design responsive.
+L'un des plus grands défis a été d'inverser l'ordre du texte et des images sur la version bureau sans dupliquer le HTML. J'ai pu le faire proprement grâce à la propriété `order` :
+
+```css
+@media (min-width: 768px) {
+    .transform-text { 
+        order: -1; 
+    }
+}
+```
+
+J'ai également consolidé mes bases en React (utilisation de `useState` pour le menu mobile) et appris à configurer Vite pour héberger correctement un site sur **GitHub Pages**.
+
+## Auteur
+
+- GitHub - [@JUDOKA104](https://github.com/JUDOKA104)

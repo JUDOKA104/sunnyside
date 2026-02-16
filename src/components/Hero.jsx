@@ -8,7 +8,7 @@ export default function Hero() {
     return (
         <section className="hero">
             <nav className="navbar">
-                <img src="/images/logo.svg" alt="Sunnyside Logo" className="logo" />
+                <img src="./images/logo.svg" alt="Sunnyside Logo" className="logo" />
 
                 {/* Bouton Hamburger (Mobile uniquement) */}
                 <button
@@ -16,7 +16,7 @@ export default function Hero() {
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Toggle menu"
                 >
-                    <img src="/images/icon-hamburger.svg" alt="menu icon" />
+                    <img src="./images/icon-hamburger.svg" alt="menu icon" />
                 </button>
 
                 {/* Liens de navigation (Bulle sur mobile, Ligne sur PC) */}
@@ -29,7 +29,7 @@ export default function Hero() {
             </nav>
 
             <h1 className="hero-title">We are creatives</h1>
-            <img src="/images/icon-arrow-down.svg" alt="arrow down" className="arrow-down animate-arrow" />
+            <img src="./images/icon-arrow-down.svg" alt="arrow down" className="arrow-down animate-arrow" />
         </section>
     );
 }
